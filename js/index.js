@@ -1,7 +1,7 @@
 const linkCalc = document.querySelector(.calc);
-sect.appendChild(linkalc.cloneNode(true));
+sect.appendChild(lincalc.cloneNode(true));
 
-linkalc.remove();
+lincalc.remove();
 
 calc.style.color = 'white';
 calc.style.backgroundColor = 'black';
