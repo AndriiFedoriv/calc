@@ -1,3 +1,16 @@
+const linkCalc = document.querySelector(.calc);
+sect.appendChild(linkalc.cloneNode(true));
+
+linkalc.remove();
+
+calc.style.color = 'white';
+calc.style.backgroundColor = 'black';
+calc.style.padding = '10px';
+calc.style.width = '250px';
+calc.style.textAlign = 'center';
+
+calc.classList.add('formatted');
+
 const display = document.querySelector('.display');
 
 document.querySelectorAll('.digits button')
