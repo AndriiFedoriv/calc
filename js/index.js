@@ -19,11 +19,20 @@ function opersPressed(ev) {
 document.querySelector('.equal').addEventListener('click', equalClicked);
 
 function equalClicked() {
-  display.value = eval(display.value);
+ let sum = eval(display.value);
+  sum = Math.round(sum *100000); 
+display.value = sum / 100000;
+ // display.value * 100000 = Math.round(eval(display.value));
 }
 
 document.querySelector('.cleanUp').addEventListener('click', cleanUpClicked);
 
 function cleanUpClicked() {
   display.value = ' ';
+}
+
+document.querySelector('.stepBack').addEventListener('click', stepBackClicked);
+
+function stepBackClicked() {
+  display.value.slice(-1);
 }
