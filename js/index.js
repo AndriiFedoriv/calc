@@ -19,10 +19,9 @@ function opersPressed(ev) {
 document.querySelector('.equal').addEventListener('click', equalClicked);
 
 function equalClicked() {
- let sum = eval(display.value);
-  sum = Math.round(sum *100000); 
-display.value = sum / 100000;
- // display.value * 100000 = Math.round(eval(display.value));
+  let sum = eval(display.value);
+  sum = Math.round(sum * 100000);
+  display.value = sum / 100000;
 }
 
 document.querySelector('.cleanUp').addEventListener('click', cleanUpClicked);
@@ -34,5 +33,6 @@ function cleanUpClicked() {
 document.querySelector('.stepBack').addEventListener('click', stepBackClicked);
 
 function stepBackClicked() {
-  display.value.slice(-1);
+  const str = display.value;
+  display.value = str.substring(0, str.length - 1);
 }
