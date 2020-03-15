@@ -22,6 +22,9 @@ function equalClicked() {
   let sum = eval(display.value);
   sum = Math.round(sum * 100000);
   display.value = sum / 100000;
+  if (display.value === 'abcdef') {
+    display.value = 'дія не можлива';
+  }
 }
 
 document.querySelector('.cleanUp').addEventListener('click', cleanUpClicked);
@@ -34,5 +37,5 @@ document.querySelector('.stepBack').addEventListener('click', stepBackClicked);
 
 function stepBackClicked() {
   const str = display.value;
-  display.value = str.substring(0, str.length - 1);
+  display.value = str.slice(0, str.length - 1);
 }
