@@ -13,7 +13,13 @@ document
   .forEach(button => button.addEventListener('click', opersPressed));
 
 function opersPressed(ev) {
-  display.value += ev.target.innerText;
+  if ('-+*/.'.includes(display.value[display.value.length - 1])) {
+    const newDisplay = display.value.slice(0, -1);
+    display.value = newDisplay;
+    display.value += ev.target.innerText;
+  } else {
+    display.value += ev.target.innerText;
+  }
 }
 
 document.querySelector('.equal').addEventListener('click', equalClicked);
