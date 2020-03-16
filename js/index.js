@@ -22,8 +22,8 @@ function equalClicked() {
   let sum = eval(display.value);
   sum = Math.round(sum * 100000);
   display.value = sum / 100000;
-  if (display.value === 'abcdef') {
-    display.value = 'дія не можлива';
+  if (display.value == Infinity) {
+    display.value = 'дія неможлива';
   }
 }
 
