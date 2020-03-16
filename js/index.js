@@ -14,8 +14,7 @@ document
 
 function opersPressed(ev) {
   if ('-+*/.'.includes(display.value[display.value.length - 1])) {
-    const newDisplay = display.value.slice(0, -1);
-    display.value = newDisplay;
+    display.value = display.value.slice(0, -1);
     display.value += ev.target.innerText;
   } else {
     display.value += ev.target.innerText;
