@@ -30,6 +30,9 @@ function equalClicked() {
   if (display.value == Infinity) {
     display.value = 'дія неможлива';
   }
+    if (display.value == -Infinity) {
+    display.value = 'дія неможлива';
+  }
 }
 
 document.querySelector('.cleanUp').addEventListener('click', cleanUpClicked);
